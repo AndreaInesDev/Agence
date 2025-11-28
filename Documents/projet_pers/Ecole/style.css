@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+nav .logo img{
+    width: 150px;
+}
+
+.menus{
+    flex: 1;
+    text-align: right;
+}
+
+.menus ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.menus ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.menus ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.menus ul li:hover::after{
+    width: 100%;
+}
+.texte{
+    color: #fff;
+    width: 90% ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.texte h1{
+    font-size: 62px;
+}
+.texte p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+}
+
+.contacter{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.contacter:hover{
+    background: #f44336;
+    border: 1px solid #f44336;
+    transition: .5s;
+}
+
+nav .fermer,
+nav .ouvrir{
+    display: none;
+}
+
+@media (max-width: 700px){
+    .menus ul li{
+        display: block;
+
+    }
+    .menus{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .texte h1{
+        font-size: 20px;
+    }
+
+    nav .fermer,
+    nav .ouvrir{
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .menus ul{
+        padding: 30px;
+    }
+
+}
+
+/*-------------------------------Course ----------------------------- */
+
+.course{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:#777 ;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.course-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-15px);
+}
+
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .course-col:hover{
+        transform: translateY(-10px);
+    }
+}
+
+/* ---------Campus------------- */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus_col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: .5s;
+}
+
+.campus_col img{
+    width: 100%;
+}
+
+.loyer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.campus_col:hover{
+    box-shadow: 0 0 20px 0px rgb(119, 119, 119); 
+}
+.loyer:hover{
+    background: rgba(226, 0, 0, .7);
+}
+
+.loyer h3{
+    width: 100%;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.loyer:hover h3{
+    opacity: 1;
+    bottom: 50%;
+}
+
+/* --------facilities ----------- */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities_col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities_col img{
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.facilities_col img:hover{
+    opacity: 1;
+}
+
+.facilities_col p{
+    padding: 0;
+}
+
+.facilities_col h3{
+    margin: 16px 0 15px 0;
+    text-align: left;
+}
+
+
+/* ----------------testimonials------------------- */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testimanial_col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+
+}
+
+.testimanial_col img{
+    height: 40px;
+    margin: 0 30px 0 5px;
+    border-radius: 50%;
+}
+
+.testimanial_col p{
+    padding: 0;
+}
+
+.testimanial_col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimanial_col i{
+    color: rgb(141, 141, 103);
+}
+
+@media (max-width: 700px){
+    .testimanial_col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+/* -----------------cta------------------ */
+
+.cta{
+    width: 80%;
+    text-align: center;
+    margin: 100px auto;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media (max-width : 700px){
+    cta h1{
+        font-size: 24px;
+    }
+}
+
+
+/* -----------footer---------- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin: 20px 0 25px 0;
+    font-weight: 600px;
+}
+
+.icones i{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart{
+    color: #f44336;
+}
