@@ -42,6 +42,13 @@ public class Location {
     public ArrayList<Vehicule> getVehiculeLoué() {
         return vehiculeLoué;
     }
+    public void supprimerVehicule(long Id){
+        for (Vehicule vehicule : vehiculeLoué){
+            if (Id == vehicule.getId()){
+                vehiculeLoué.remove(vehicule);
+            }
+        }
+    }
 
     public int getNbJours() {
         return nbJours;
