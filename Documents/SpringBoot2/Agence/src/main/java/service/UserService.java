@@ -21,7 +21,6 @@ public class UserService {
         return userRepos.ajoutUser(user);
     }
 
-
     public  ArrayList<User> getAllUsers(){
         return userRepos.getAllUser();
     }
